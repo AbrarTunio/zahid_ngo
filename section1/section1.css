@@ -1,0 +1,148 @@
+/* Font styling */
+body, .topbar a, .navbar-nav .nav-link {
+    font-family: 'Karla', sans-serif;
+}
+
+.navbar-brand {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.nav-link {
+    font-size: 1rem;
+    font-weight: normal !important; 
+}
+
+/* Topbar styling */
+.topbar {
+    font-size: 0.8rem;
+    background-color: #f8f9fa;
+}
+
+.topbar a {
+    color: #6c757d;
+    text-decoration: none;
+}
+
+.topbar a:hover {
+    color: #000;
+}
+
+/* Navbar styling */
+.navbar-light .navbar-nav .nav-link {
+    font-weight: 600;
+    color: #333;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effect for Links */
+.navbar-light .navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #007bff;
+    transition: width 0.3s ease;
+}
+
+.navbar-light .navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+/* Active Link Styling */
+.navbar-light .navbar-nav .nav-link.active {
+    color: #007bff !important;
+    font-weight: bold;
+    background-color: #fdc221;
+}
+
+.navbar-light .navbar-nav .nav-link.active::after {
+    width: 100%;
+}
+
+.banner-font{
+    font-size: 3.5rem !important;
+}
+
+/* Banner Styling */
+.banner-image {
+    background-image: url("../images/banner.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Floating Image Styling */
+.banner-image img {
+    position: absolute;
+}
+
+#float1 {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    animation: float1 3s ease-in-out infinite alternate;
+}
+
+#float2 {
+    top: 5%;
+    right: 0%;
+    animation: float2 4s ease-in-out infinite alternate;
+    width: 200px;
+}
+
+#float3 {
+    bottom: 0;
+    right: 0;
+    animation: float3 5s ease-in-out infinite alternate;
+    width: 200px;
+}
+
+.color_big::after {
+    content: "";
+    position: absolute;
+    width: 28%;
+    height: 20px;
+    background: #fdc221;
+    top: 37px;
+    left: 5px;
+    z-index: -1;
+}
+
+.color_big{
+    display: inline-block;
+}
+
+/* Floating Animations */
+@keyframes float1 {
+    from {
+        transform: translateY(-10px);
+    }
+    to {
+        transform: translateY(10px);
+    }
+}
+
+@keyframes float2 {
+    from {
+        transform: translateY(-10px);
+    }
+    to {
+        transform: translateY(10px);
+    }
+}
+
+@keyframes float3 {
+    from {
+        transform: translateY(-5px);
+    }
+    to {
+        transform: translateY(5px);
+    }
+}
